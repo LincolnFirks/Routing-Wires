@@ -1,15 +1,15 @@
-Project Write-Up
+# Project Write-Up
 
-1. Overview of Algorithm
-
-
-
-2. Applying our algorithm to an interesting board
+## 1. Overview of Algorithm
 
 
 
-3. Evaluation of our algorithm with respect to finding and minimizing wire layouts
+## 2. Applying our algorithm to an interesting board
 
 
 
-4. Evaluation of the time complexity and wall-clock time of our algorithm
+## 3. Evaluation of our algorithm with respect to finding and minimizing wire layouts
+
+
+
+## 4. Evaluation of the time complexity and wall-clock time of our algorithm
