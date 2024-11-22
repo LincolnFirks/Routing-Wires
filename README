@@ -1,15 +1,20 @@
 Project Write-Up
 
 1. Overview of Algorithm
-
+- blah
 
 
 2. Applying our algorithm to an interesting board
-
+- come up with examples, show how naive approach (just bfs)
+  may differ/fail compared to ours (bfs + backtracking)
 
 
 3. Evaluation of our algorithm with respect to finding and minimizing wire layouts
-
+- discuss how we ended up with the wires that we placed and also talk about their length
 
 
 4. Evaluation of the time complexity and wall-clock time of our algorithm
+- p! * (p * n) = all the combinations of wires * bfs for each of the pairs
+  - n = number of spots on the board
+  - p = number of pairs (could be n/2 at most)
+- wall clock time = time shown after running a test
