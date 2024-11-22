@@ -12,12 +12,20 @@ public class Routing {
     public static ArrayList<Wire>
     findPaths(Board board, ArrayList<Endpoints> goals) {
         ArrayList<Wire> res = new ArrayList<>();
-        for (Endpoints e : goals) {
+        Queue<Endpoints> pairs = new LinkedList<>(goals);
+        while (!pairs.isEmpty()) {
+            Endpoints e = pairs.poll();
             Wire curr = BFS(board, e);
-            if (curr != null) {
-                board.placeWire(curr);
-                res.add(curr);
+            while (curr == null) {
+                Wire last = res.get(res.size()-1);
+                res.remove(res.size()-1);
+                board.removeWire(last);
+                pairs.add(new Endpoints(last.id, last.start(), last.end()));
+                curr = BFS(board, e);
             }
+            board.placeWire(curr);
+            res.add(curr);
+
         }
         return res;
     }
@@ -33,7 +41,7 @@ public class Routing {
                 return curr;
             }
             for (Coord adj : board.adj(curr.end())) {
-                if (!seen.contains(adj) && !board.isObstacle(adj) ) {
+                if ((!seen.contains(adj) &&  !board.isOccupied(adj)) || (adj.equals(e.end))) {
                     seen.add(adj);
                     Wire newWire = new Wire(e.id, curr.getPoints());
                     newWire.add(adj);
@@ -41,6 +49,8 @@ public class Routing {
                 }
             }
         }
+
+
         return null;
     }
 
