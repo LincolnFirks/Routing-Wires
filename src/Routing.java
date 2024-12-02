@@ -32,7 +32,8 @@ public class Routing {
             // once found valid wire placement, add to board and reult
 
         } // in total, each permutation of order of placing wires could have to be tested. So outer loop is O(p!)
-          // each pair in each permutation could have to run BFS, so total time complexity is O(p! * n)
+          // each pair in each permutation could have to run BFS, so run BFS p! * p times 
+          // BFS is O(n), so total time complexity is O(p! * p * n) for p pairs of endpoints and n valid coords on board
         return res;
     }
 
