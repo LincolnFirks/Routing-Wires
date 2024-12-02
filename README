@@ -15,6 +15,7 @@ Project Write-Up
 3. Evaluation of our algorithm with respect to finding and minimizing wire layouts
 - discuss how we ended up with the wires that we placed and also talk about their length
 - if have multiple boards, what are wire lengths of new alg vs naive approach
+- is there a board where our new alg creates a sub-optimal result and why?
 
 
 4. Evaluation of the time complexity and wall-clock time of our algorithm
