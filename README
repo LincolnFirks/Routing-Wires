@@ -5,11 +5,7 @@ Project Write-Up
 
 
 2. Applying our algorithm to an interesting board
-- come up with examples, show how naive approach (just bfs)
-  may differ/fail compared to ours (bfs + backtracking)
-
-- boards that our new alg fail on
-- boards that pass our new alg but not naive approach
+https://drive.google.com/file/d/1bZH2Z_qB3xL8apKrwA5Apb4nTVymQEQQ/view?usp=sharing
 
 
 3. Evaluation of our algorithm with respect to finding and minimizing wire layouts
