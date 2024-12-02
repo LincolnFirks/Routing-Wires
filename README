@@ -16,7 +16,7 @@ Additionally, BFS finds the shortest paths to the spots on the board, so while o
 
 For multiple boards without obstacles and wires that cross, our BFS with back-tracking produces the same wire lengths as the normal BFS.
 However, if there are any violations, our algorithm with BFS and back-tracking produces wire lengths that fit the situation, both shortening and elongating certain wires to make it work.
-On the other hand, our naive approach with just BFS fails.
+On the other hand, our naive approach, with just BFS, fails.
 
 For boards that cannot work under any circumstances, such as a 2x2 board filled with two pairs with endpoints where the start and end are diagonally across from each other on the board, 
 our BFS with back-tracking would output an infinite loop as it will continue trying to back-track.
@@ -27,4 +27,6 @@ On the other hand, our naive BFS approach would not place down any wires since t
 - p! * (p * n) = all the combinations of wires * bfs for each of the pairs
   - n = number of spots on the board
   - p = number of pairs (could be n/2 at most)
-- wall clock time = 41 ms
+- wall clock time = 41 ms 
+  - excluding time to build board
+  - tested the first example from question 2
