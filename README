@@ -22,7 +22,8 @@ For multiple boards without obstacles and wires that cross, our BFS with back-tr
 However, if there are any violations, our algorithm with BFS and back-tracking produces wire lengths that fit the situation, both shortening and elongating certain wires to make it work.
 On the other hand, our naive approach with just BFS fails.
 
-For boards that cannot work under any circumstances, such as a 2x2 board filled with two pairs with endpoints where the start and end are diagonally across from each other on the board, our BFS with back-tracking would output an infinite loop as it will continue trying to back-track.
+For boards that cannot work under any circumstances, such as a 2x2 board filled with two pairs with endpoints where the start and end are diagonally across from each other on the board, 
+our BFS with back-tracking would output an infinite loop as it will continue trying to back-track.
 On the other hand, our naive BFS approach would not place down any wires since there is no back-tracking and the board does not work.
 
 
